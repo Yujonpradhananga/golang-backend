@@ -23,8 +23,6 @@ func (app *application) mount() http.Handler {
 		w.Write([]byte("all good"))
 	})
 
-	// http.ListenAndServe(":3333", r)
-
 	return r
 }
 
