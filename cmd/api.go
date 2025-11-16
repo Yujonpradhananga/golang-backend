@@ -5,6 +5,7 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/Yujonpradhananga/internal/products"
 	"github.com/go-chi/chi/v5"
 	"github.com/go-chi/chi/v5/middleware"
 )
@@ -23,6 +24,8 @@ func (app *application) mount() http.Handler {
 		w.Write([]byte("all good"))
 	})
 
+	productHandler := products.NewHandler(nil)
+	r.Get("/products", productHandler.ListProducts)
 	return r
 }
 
