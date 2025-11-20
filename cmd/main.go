@@ -6,7 +6,7 @@ import (
 	"os"
 
 	"github.com/Yujonpradhananga/internal/env"
-	"github.com/jackc/pgx"
+	"github.com/jackc/pgx/v5"
 )
 
 func main() {
@@ -33,6 +33,7 @@ func main() {
 
 	api := application{
 		config: cfg,
+		db:     conn,
 	}
 
 	if err := api.run(api.mount()); err != nil {
