@@ -1,4 +1,5 @@
-🚀 Tech Stack
+Tech Stack
+
 Go 1.22+
 
 Chi – HTTP router and middleware
